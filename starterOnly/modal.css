@@ -138,6 +138,10 @@ main {
 }
 
 /* Modal form */
+.form--error {
+  display: none;
+}
+
 
 .button {
   background: #fe142f;
