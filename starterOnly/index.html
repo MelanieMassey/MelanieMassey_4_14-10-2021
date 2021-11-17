@@ -49,7 +49,7 @@
             <form name="reservationForm" id="form" action="index.html" method="get">
               <div class="formData">
                 <label for="first">Prénom</label><br>
-                <input class="text-control" type="text" id="first" name="first" minlength="2"/><br>
+                <input class="text-control" type="text" id="first" name="first" minlength="2"/>
                 <span class="form--error" id="first--error">Veuillez entrer 2 caractères ou plus pour le champ du nom.</span>
               </div>
               <div class="formData">
@@ -125,8 +125,11 @@
               </div>
               <input class="btn-submit" type="submit" class="button" value="C'est parti"/>
             </form>
-            <div id="validationMessage">
-              <p>Thank you for submitting your registration details</p>
+            <div id="content-validationMessage">
+              <div id="validationMessage">
+                <p>Merci ! Votre réservation a été reçue.</p>
+              </div>
+              <button id="btn-close">Fermer</button>
             </div>
           </div>
         </div>

@@ -12,15 +12,19 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.getElementById("close");
+const closeBtnAfterSubmit = document.getElementById("btn-close");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-closeBtn.addEventListener("click", closeModal);
 
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
+
+// Close modal events
+closeBtn.addEventListener("click", closeModal);
+closeBtnAfterSubmit.addEventListener("click", closeModal);
 
 // Close modal form
 function closeModal() {
@@ -37,6 +41,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 function validate() {
   
   let error = 0;
+
   // Message erreur firstName
   const firstName = document.getElementById("first");
   if (firstName.value.length < 2) {
@@ -102,9 +107,10 @@ function validate() {
     error++;
   }
 
+  // Affichage message validation si pas d'erreurs
   if (error == 0){
     document.reservationForm.style.display="none";
-    document.getElementById("validationMessage").style.display = "inline-block";
+    document.getElementById("content-validationMessage").style.display = "inline-block";
   }
 }
 
