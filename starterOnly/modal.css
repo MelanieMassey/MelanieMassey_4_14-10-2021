@@ -110,17 +110,19 @@ main {
 }
 
 /* ==Modal, formulaire d'inscription== */
-.button {
+#btn-submit {
+  /* ~Code doublon avec .btn-submit, utilisation de #btn-submit seulement pour modifier margin-top
   background: #fe142f;
   margin-top: 0.5em;
   padding: 1em;
   color: #fff;
   border-radius: 15px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 16px;*/
+  margin-top: 11px;
 }
 
-.button:hover {
+#btn-submit:hover {
   background: #3876ac;
 }
 
@@ -166,6 +168,7 @@ label {
   font-size: 17px;
   font-weight: normal;
   display: inline-block;
+  margin-top: 11px;
   margin-bottom: 11px;
 }
 input {
@@ -185,7 +188,7 @@ input {
   display: none;
   font-size: 0.4em;
   color: #e54858;
-  margin-top: 7px;
+  margin-top: 0;
   margin-bottom: 7px;
   text-align: right;
   line-height: 0.3;
@@ -321,7 +324,6 @@ input[data-error]::after {
   font-weight: 400;
   margin: 200px 50px;
 }
-
 
 /*Boutons, mise en forme*/
 .btn-submit, .btn-signup, #btn-close {
@@ -511,8 +513,9 @@ footer {
     margin-top: 0.8rem;
   }
   .content {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
+  #close {}
 }
 
 
