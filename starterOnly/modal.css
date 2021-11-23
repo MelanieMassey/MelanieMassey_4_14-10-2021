@@ -492,6 +492,9 @@ footer {
 
 /* ==Medias queries== */
 @media screen and (max-width: 768px) {
+  .topnav {
+    margin-top: 1rem;
+  }
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
