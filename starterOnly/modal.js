@@ -14,6 +14,11 @@ const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelectorAll(".close");
 // const closeBtnAfterSubmit = document.getElementById("btn-close");
 
+// Encadré rouge lorsque erreur formulaire
+function redBorder() {
+  textControl.style.border = "2px solid #e54858";
+}
+
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -46,6 +51,7 @@ function validate() {
   const firstName = document.getElementById("first");
   if (firstName.value.length < 2) {
     document.getElementById("first--error").style.display = "inline-block";
+    document.getElementById("first").style.border = "2px solid #FF4E60";
     error++;
   } else {
     document.getElementById("first--error").style.display = "none";
@@ -54,6 +60,7 @@ function validate() {
   const familyName = document.getElementById("last");
   if (familyName.value.length < 2) {
     document.getElementById("last--error").style.display = "inline-block";
+    document.getElementById("last").style.border = "2px solid #FF4E60";
     error++;
   } else {
     document.getElementById("last--error").style.display = "none";
@@ -65,6 +72,7 @@ function validate() {
     document.getElementById("email--error").style.display = "none";
   } else {
     document.getElementById("email--error").style.display = "inline-block";
+    document.getElementById("email").style.border = "2px solid #FF4E60";
     error++;
   }
   // Message erreur birthdate
@@ -72,6 +80,7 @@ function validate() {
   let regexBirthdate = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
   if (birthdate.value.length == 0 || !regexBirthdate.test(birthdate.value)) {
     document.getElementById("birthdate--error").style.display = "inline-block";
+    document.getElementById("birthdate").style.border = "2px solid #FF4E60";
     error++;
   } else {
     document.getElementById("birthdate--error").style.display = "none";
@@ -80,6 +89,7 @@ function validate() {
   const quantity = document.getElementById("quantity");
   if (isNaN(quantity.value) || quantity.value <= 0){
     document.getElementById("quantity--error").style.display = "inline-block";
+    document.getElementById("quantity").style.border = "2px solid #FF4E60";
     error++;
   } else {
     document.getElementById("quantity--error").style.display = "none";
